@@ -1,0 +1,120 @@
+
+$navbarWidth: 10em;
+
+a {
+  text-decoration: none !important;
+}
+
+
+.navigation-bar {
+  height: 1050px;
+  width: $navbarWidth;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: #022d73;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: self-start;
+  transition: all .75ms ease;
+}
+
+.fade-in {
+  width: $navbarWidth + $navbarWidth;
+}
+
+
+.navigation-item:hover {
+  background-color: white;
+  color: black;
+  transition: color .1s ease-in-out;
+  transition: background-color .1s ease-in-out
+}
+
+.navigation-item {
+  text-decoration: none;
+  font-family: "Lucida Sans", "monospace", sans-serif;
+  display: block;
+  margin: 1rem 2rem 1rem 0;
+  padding: 1em 0 1em 1em;
+  width: 100%;
+}
+
+#content-wrapper {
+  margin-left: $navbarWidth; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  height: 5em;
+  width: 5em;
+  border: .1rem solid white;
+  border-radius: 100%;
+  background-image: 
+    linear-gradient(
+      135deg,
+      white,
+      rgb(204, 98, 11),
+      black
+    );
+}
+
+.book-card-top {
+  height: 20rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #91aeff69;
+}
+
+.card-description {
+  height: 10rem;
+}
+
+
+.my-card-footer {
+  flex: 1 1 auto;
+  margin-bottom: 2rem;
+}
+
+.my-card-footer > .btn {
+  width: 100%;
+}
+
+.carousel {
+  background-color: #9797978e;
+}
+
+.card-title {
+  height: 3rem;
+}
+
+.top-bar {
+  background-color: #022d73;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.movie-card-top {
+  height: calc(27rem - 1px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #91aeff69;
+}
