@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Providers\Services\API;
+use App\Providers\Services\Search;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
+        $this->app->bind('api', function() {
+            return new API();
+        });
+        
+        $this->app->bind('search', function() {
+            return new Search();
+        });
     }
 
     /**

@@ -28,20 +28,23 @@ Route::get('/search', [App\Http\Controllers\SearchController::class, 'show'])->n
 Route::post('/search', [App\Http\Controllers\SearchController::class, 'index']);
 
 
+Route::get('/vue/test', [App\Http\Controllers\vueController::class, 'test']); 
+
 //ENTERTAINMENT ROUTES
 Route::get('/entertainment/{entertainment_id}', [App\Http\Controllers\EntertainmentController::class, 'show'])->name('showEntertainment');
 
 //USER ROUTES
 //Route::get('/user/{user_id}', [App\Http\Controllers\UserController::class, 'show'])->name('showUser');
-//Route::post('/user/{user_id}/update', [App\Http\Controllers\UserController::class, 'update'])->middleware('AuthOrAdmin')->name('updateUser');
-//Route::post('/user/{user_id}/delete', ['App\Http\Controllers\UserController::class, 'delete'])->middleware('AuthOrAdmin')->name('deleteUser');
+//Route::post('/user', [App\Http\Controllers\UserController::class, 'create'])->name('createUser');
+//Route::patch('/user/{user_id}', [App\Http\Controllers\UserController::class, 'update'])->middleware('AuthOrAdmin')->name('updateUser');
+//Route::delete('/user/{user_id}', ['App\Http\Controllers\UserController::class, 'delete'])->middleware('AuthOrAdmin')->name('deleteUser');
 
 
 //ADMIN ROUTES
-//Route::get('/admin/{user_id}/privileges', [App\Http\Controllers\AdminController::class, 'update'])->middleware('admin')->name('adminUpdatePrivileges');
-//Route::post('/admin/{user_id}/privileges', [App\Http\Controllers\AdminController::class, '?????'])->middleware('admin')->name('adminUpdatePrivilegesPost');
-
+//Route::get('/admin/{user_id}', [App\Http\Controllers\AdminController::class, 'show'])->middleware('admin')->name('adminUpdatePrivileges');
+//Route::patch('/admin/{user_id}', [App\Http\Controllers\AdminController::class, 'update'])->middleware('admin')->name('adminUpdate');
+//Route::delete('/admin/{user_id}', [App\Http\Controllers\AdminController::class, 'delete'])->middleware('admin')->name('adminDelete');
 
 
 //PROFILE ROUTES 
-
+//Route::get('/profile)
