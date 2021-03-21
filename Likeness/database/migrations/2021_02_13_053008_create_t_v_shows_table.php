@@ -17,8 +17,8 @@ class CreateTVShowsTable extends Migration
             $table->id();
             $table->integer('TMDB_id');
             $table->string('title');
-            $table->string('imagePath')->nullable(); //posterPath
-            //create new linking table for genres table $table->string('genre')->nullable; //genre.name //make this a tag //have to use api like this to get genre title: ???
+            $table->string('imagePath')->nullable(); //poster_path
+            $table->string('backdropPath')->nullable(); //backdrop_path
             $table->text('description')->nullable(); //overview
             $table->date('releaseDate')->nullable(); //release_date
             $table->timestamps();

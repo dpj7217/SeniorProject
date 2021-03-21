@@ -16,4 +16,8 @@ class Genres extends Model
     public function tvShows() {
         return $this->belongsToMany(TVShows::class);
     }
+
+    public static function getID($API_id) {
+        return Genres::where('TMDB_genre_id', $API_id)->first()->id;
+    }
 }

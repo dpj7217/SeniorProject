@@ -6,6 +6,10 @@ a {
 }
 
 
+.content {
+  margin-top: 10rem;
+}
+
 .navigation-bar {
   height: 1050px;
   width: $navbarWidth;
@@ -23,8 +27,8 @@ a {
   transition: all .75ms ease;
 }
 
-.fade-in {
-  width: $navbarWidth + $navbarWidth;
+.navigation-bar:hover {
+  width: 1000px;
 }
 
 
@@ -117,4 +121,28 @@ a {
   justify-content: center;
   align-items: center;
   background-color: #91aeff69;
+}
+
+.searchbar {
+  float: right;
+  width: 20em;
+  padding: 0;
+  height: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#searchImg {
+  float: right;
+  padding: 0;
+  width: 1.5em;
+  height: 1.5em;
+  margin: auto;
+}
+
+#cornerSearch {
+  width: 100%;
+  margin: 0.05em 0.5em;
+  border-radius: 0.33em;
 }

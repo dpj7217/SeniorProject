@@ -36,6 +36,7 @@ class CreateMoviesTable extends Migration
             $table->integer('TMDB_id');
             $table->string('title');
             $table->string('imagePath')->nullable(); //posterPath
+            $table->string('backdropPath')->nullable(); //backdropPath
             $table->text('description')->nullable(); //overview
             $table->date('releaseDate')->nullable(); //release_date
             $table->timestamps();

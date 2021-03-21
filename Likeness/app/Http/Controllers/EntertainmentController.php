@@ -11,15 +11,18 @@ class EntertainmentController extends Controller
 {
     public function show($entertainment_id) {
         if ($show = TVShow::where('TMDB_id', $entertainment_id)->first()) {
-            return view('tvShowDetails', [
+            dd($show);
+            return view('entertainment.tvShowDetails', [
                 'entertainment' => $show
             ]);
         } else if ($movie = Movie::where('TMDB_id', $entertainment_id)->first()) {
-            return view('movieDetails', [
+            dd($movie);
+            return view('entertainment.movieDetails', [
                 'entertainment' => $movie
             ]);
         } else if ($book = Book::where('api_id', $entertainment_id)->first()) {
-            return view('bookDetailsd', [
+            dd($book);
+            return view('entertainment.bookDetailsd', [
                 'entertainment' => $book
             ]);
         } else {
